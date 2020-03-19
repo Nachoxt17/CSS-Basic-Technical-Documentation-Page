@@ -1,0 +1,437 @@
+
+<nav id="navbar">
+  <header>CSS Basic Documentation</header>
+  <ul>
+    
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      
+    <li><a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+    
+    <li><a class="nav-link" href="#CSS_Selectors">CSS Selectors</a></li>
+    
+    <li><a class="nav-link" href="#The_CSS_element_Selector">The CSS element Selector</a></li>
+    
+    <li><a class="nav-link" href="#The_CSS_id_Selector">The CSS id Selector</a></li>
+    
+    <li><a class="nav-link" href="#The_CSS_class_Selector">The CSS class Selector</a></li>
+    
+    <li><a class="nav-link" href="#The_CSS_Universal_Selector">The CSS Universal Selector</a></li>
+    
+    <li><a class="nav-link" href="#The_CSS_Grouping_Selector">The CSS Grouping Selector</a></li>
+    
+    <li><a class="nav-link" href="#How_To_Add_CSS">How To Add CSS</a></li>
+        
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+  
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        CSS is a language that describes the style of an HTML document.
+
+CSS describes how HTML elements should be displayed.
+      </p>
+      
+      <ul>
+        <li>CSS stands for Cascading Style Sheets</li>
+        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+        <li>External stylesheets are stored in CSS files</li>
+      </ul>
+      
+    </article>
+  </section>
+  <section class="main-section" id="CSS_Syntax">
+    <header>CSS Syntax</header>
+    <article>
+      <p>
+        A CSS rule-set consists of a selector and a declaration block:
+      </p>
+
+ <img src="https://www.w3schools.com/css/selector.gif">
+      
+      <p>
+        The selector points to the HTML element you want to style.
+
+The declaration block contains one or more declarations separated by semicolons.
+
+Each declaration includes a CSS property name and a value, separated by a colon.
+
+A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.
+       </p>
+  
+      <h2>Example:_</h2>
+      
+     <p>
+  In this example all &lt;p&gt; HTML elements will be center-aligned, with a red text color:
+      </p>
+      
+      <code> 
+    p {
+    color: red;
+    text-align: center;
+    }
+      </code>
+        
+ </article>
+  </section>
+  <section class="main-section" id="CSS_Selectors">
+    <header>CSS Selectors</header>
+    <article>
+      <p>
+      CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+We can divide CSS selectors into five categories:
+     </p>
+      
+      <ul>
+        <li>
+          Simple selectors (select elements based on name, id, class).
+          </li>
+        <li>
+          Combinator selectors (select elements based on a specific relationship between them).
+          </li>
+        <li>
+          Pseudo-class selectors (select elements based on a certain state).
+          </li>
+        <li>
+          Pseudo-elements selectors (select and style a part of an element).
+          </li>
+        <li>
+          Attribute selectors (select elements based on an attribute or attribute value).
+          </li>
+        </ul>
+      
+     <p>
+      This page will explain the most basic CSS selectors.
+       </p>
+      
+    </article>
+  </section>
+  <section class="main-section" id="The_CSS_element_Selector">
+    <header>The CSS element Selector</header>
+   <article>
+     
+     <p>
+      The element selector selects HTML elements based on the element name.
+     <h2>Example:_</h2>
+      Here, all "p" elements on the page will be center-aligned, with a red text color:
+     <code>
+      p {
+      text-align: center;
+      color: red;
+      }
+      </code>
+     
+     </p>
+    
+    </article>
+  </section>
+  <section class="main-section" id="The_CSS_id_Selector">
+    <header>The CSS id Selector</header>
+    <article>
+      
+      <p>
+        The id selector uses the id attribute of an HTML element to select a specific element.
+
+The id of an element is unique within a page, so the id selector is used to select one unique element!
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+      </p>
+      
+      <h2>Example:_</h2>
+      
+      <p>
+       The CSS rule below will be applied to the HTML element with id="para1": 
+        <code>
+#para1 {
+  text-align: center;
+  color: red;
+}
+        </code>
+      </p>
+      
+     <p>
+       Note: An id name cannot start with a number!
+    </p>
+      
+    </article>
+  </section>
+  <section class="main-section" id="The_CSS_class_Selector">
+    <header>The CSS class Selector</header>
+    <article>
+      
+      <p>
+        The class selector selects HTML elements with a specific class attribute.
+
+To select elements with a specific class, write a period (.) character, followed by the class name.
+      </p>
+      
+      <h2>Example:_</h2>
+      
+     <p>       
+       In this example all HTML elements with class="center" will be red and center-aligned: 
+      </p>
+      
+      <code>
+      .center {
+      text-align: center;
+      color: red;
+      }
+    </code>
+      
+    <p>
+    You can also specify that only specific HTML elements should be affected by a class.
+    </p>
+      
+  <h2>Example:_</h2>
+      
+    <p>
+    In this example only &lt;p&gt; elements with class="center" will be center-aligned:
+      </p>
+    
+  <code>
+   p.center {
+   text-align: center;
+   color: red;
+   }
+    </code>
+    
+    <p>
+    HTML elements can also refer to more than one class.
+    </p>
+      
+    <h2>Example:_</h2>
+    
+    <p>
+      In this example the &lt;p&gt; element will be styled according to class="center" and to class="large":
+      </p>
+    
+     <code>
+       &lt;p class="center large"&gt; This paragraph refers to two classes.
+      </code>
+      
+    <p>
+      Note: A class name cannot start with a number!
+    </p>
+      
+    </article>
+  </section>
+  <section class="main-section" id="The_CSS_Universal_Selector">
+    <header>The CSS Universal Selector</header>
+    <article>
+      <p>
+        The universal selector (*) selects all HTML elements on the page.
+      </p>
+
+      <h2>Example:_</h2>
+      
+      <p>
+        The CSS rule below will affect every HTML element on the page:
+      </p>
+      
+      <code>
+     * {
+     text-align: center;
+     color: blue;
+      }
+      </code>
+      
+    </article>
+  </section>
+  <section class="main-section" id="The_CSS_Grouping_Selector">
+    <header>The CSS Grouping Selector</header>
+    <article>
+      <p>
+        The grouping selector selects all the HTML elements with the same style definitions.
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+      </p>
+
+      <code>
+      h1 {
+      text-align: center;
+      color: red;
+       }
+  
+      h2 {
+      text-align: center;
+      color: red;
+      } 
+
+      p {
+      text-align: center;
+      color: red;
+      }
+      </code>
+      
+      <h2>Example:_</h2>
+      
+      <code>
+       h1, h2, p {
+       text-align: center;
+       color: red;
+       }
+      </code>
+
+    </article>
+  </section>
+  <section class="main-section" id="How_To_Add_CSS">
+    <header>How To Add CSS</header>
+    <article>
+      <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+      
+      <h2>Three Ways to Insert CSS</h2>
+      
+      <p>
+        There are three ways of inserting a style sheet:
+      </p>
+      
+      <ul>
+        <li>External CSS</li>
+        <li>Internal CSS</li>
+        <li>Inline CSS</li>
+        </ul>
+      
+   <h2 style="color:black;" >External CSS</h2>
+      
+      <p>
+        With an external style sheet, you can change the look of an entire website by changing just one file!
+
+Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the head section.
+      </p>
+
+ <h2>Example:_</h2>
+      
+      <p>
+        External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of an HTML page:
+      </p>
+      
+      <code>
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+ &lt;link rel="stylesheet" type="text/css"          href="mystyle.css"&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+ &lt;h1>This is a heading&lt;/h1&gt;
+ &lt;p>This is a paragraph.&lt;/p&gt;
+
+ &lt;/body&gt;
+ &lt;/html&gt;
+      </code>
+      
+      <p>
+        An external style sheet can be written in any text editor, and must be saved with a .css extension.
+
+The external .css file should not contain any HTML tags.
+
+Here is how the "mystyle.css" file looks like:
+      </p>
+      
+  <h2>"mystyle.css"</h2>
+     <code>
+   body {
+   background-color: lightblue;
+   }
+
+   h1 {
+   color: navy;
+   margin-left: 20px;
+   }
+      </code>
+      <p>
+        Note: Do not add a space between the property value and the unit (such as " margin-left: 20 px; "). The correct way is:" margin-left: 20px; ".
+      </p>
+      
+  <h2 style="color:black;">Internal CSS</h2>
+
+      <p>
+        An internal style sheet may be used if one single HTML page has a unique style.
+
+The internal style is defined inside the &lt;style&gt; element, inside the head section.
+      </p>
+
+      <h2>Example:_</h2>
+      
+      <p>
+        Internal styles are defined within the &lt;style&gt; element, inside the <head> section of an HTML page:
+      </p>
+      
+        <code>
+         &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+        
+  <h2 style="color:black;">Inline CSS</h2>
+      
+      <p>
+        An inline style may be used to apply a unique style for a single element.
+
+To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+      </p>
+        
+      <h2>Example:_</h2>
+      
+      <p>
+        Inline styles are defined within the "style" attribute of the relevant element:
+      </p>
+      
+      <code>
+        &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+      
+      <p>
+        Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.
+      </p>
+      
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="https://www.w3schools.com/html/default.asp"
+            target="_blank"
+            >W3Schools.</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
